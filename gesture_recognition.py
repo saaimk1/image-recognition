@@ -29,6 +29,18 @@ cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, WINDOW_WIDTH)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, WINDOW_HEIGHT)
 
+# Create resizable windows
+cv2.namedWindow('Camera Feed', cv2.WINDOW_NORMAL)
+cv2.namedWindow('Detected Gesture', cv2.WINDOW_NORMAL)
+
+# Set initial window sizes
+cv2.resizeWindow('Camera Feed', WINDOW_WIDTH, WINDOW_HEIGHT)
+cv2.resizeWindow('Detected Gesture', WINDOW_WIDTH, WINDOW_HEIGHT)
+
+# Optional: Set minimum window sizes (prevents windows from becoming too small)
+cv2.resizeWindow('Camera Feed', max(640, WINDOW_WIDTH), max(480, WINDOW_HEIGHT))
+cv2.resizeWindow('Detected Gesture', max(640, WINDOW_WIDTH), max(480, WINDOW_HEIGHT))
+
 # Gesture smoothing
 gesture_history = []
 HISTORY_SIZE = 8
