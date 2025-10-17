@@ -1,10 +1,9 @@
 # Gesture Recognition with OpenCV and MediaPipe
 
 A real-time hand gesture recognition system that detects specific gestures and displays corresponding images.
-
 ## Features
 
-- **Real-time hand tracking** using MediaPipe Hands
+- **Real-time hand tracking** using MediaPipe Han
 - **Gesture detection**:
   - Finger in mouth gesture
   - Pointing finger gesture
